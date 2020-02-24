@@ -2,10 +2,11 @@
 import time
 from ads1015 import ADS1015
 
-CHANNELS = ['in0/ref', 'in1/ref', 'in2/ref']
+#CHANNELS = ['in0/ref', 'in1/ref', 'in2/ref']
+CHANNELS = ['in1/ref']
 
 
-print("""read-all.py - read all three inputs of the ADC
+print("""read-georgina.py - read in1/ref input of the ADC
 
 Press Ctrl+C to exit!
 """)
@@ -26,7 +27,7 @@ try:
             print("{}: {:6.3f}v".format(channel, value))
 
         print("")
-        time.sleep(0.5)
+        time.sleep(0.25)
 
 except KeyboardInterrupt:
     pass
